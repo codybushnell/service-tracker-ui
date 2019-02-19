@@ -19,5 +19,5 @@ steps:
       docker login -u $(acrName) -p $pswd $(acrName).azurecr.io
       docker push $(acrName).azurecr.io/$(imageName)
     env:
-      pswd: $(dockerPassword)
+      pswd: $(acrPassword)
     displayName: "Build and push Docker image"
